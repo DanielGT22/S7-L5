@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body
+    id="svgContainer"
+    class="bg-warning d-flex align-items-center justify-content-around flex-column"
+  >
+    <h2 class="mx-auto">Just a second</h2>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let svgFiles = [
+        "../SVG/game (1).svg",
+        "../SVG/game (2).svg",
+        "../SVG/game (3).svg",
+        "../SVG/game (4).svg",
+        "../SVG/game (5).svg",
+        "../SVG/game (6).svg",
+        "../SVG/game (7).svg",
+        "../SVG/game (8).svg",
+        "../SVG/game (9).svg",
+      ];
+      let randomIndex = Math.floor(Math.random() * svgFiles.length);
+      let randomSVGFile = svgFiles[randomIndex];
+
+      let svgContainer = document.getElementById("svgContainer");
+
+      let imageElement = document.createElement("img");
+      imageElement.src = randomSVGFile;
+      imageElement.classList.add("w-25");
+      svgContainer.appendChild(imageElement);
+    </script>
+    <script>
+      setTimeout(function () {
+        window.location.href = "../Pagina Principale/main.html";
+      }, 3000);
+    </script>
+  </body>
+</html>
